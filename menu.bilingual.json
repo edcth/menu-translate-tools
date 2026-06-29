@@ -1,0 +1,832 @@
+{
+  "schema_version": "1.0.0",
+  "source": {
+    "flippingbook_url": "https://online.flippingbook.com/view/64265310/2/",
+    "title": "A la Carte Lunch Kayuputi Menu",
+    "total_pages": 5,
+    "extraction_method": "FlippingBook searchtext.js text layer + visual/PDF cross-check for page 4",
+    "note": "The user-uploaded PDF contained only one rendered page from the full 5-page FlippingBook menu."
+  },
+  "restaurant": {
+    "en": "Kayuputi",
+    "zh_hant": "Kayuputi"
+  },
+  "menu_name": {
+    "en": "A la Carte Lunch",
+    "zh_hant": "單點午餐餐牌"
+  },
+  "service_time": "12:00 PM - 3:30 PM",
+  "currency": "IDR",
+  "tax_and_service": {
+    "included_in_listed_prices": true,
+    "rate_percent": 21,
+    "label": "Prices are inclusive of 21% service charge and government tax",
+    "calculation_note": "pre_service_tax_estimate = listed_price / 1.21; included_service_tax_estimate = listed_price - pre_service_tax_estimate",
+    "label_zh_hant": "所有標示價格已包含 21% 服務費及政府稅。",
+    "label_en": "Prices are inclusive of 21% service charge and government tax"
+  },
+  "dietary_legend": {
+    "V": {
+      "en": "Vegetarian",
+      "zh_hant": "素食"
+    },
+    "H": {
+      "en": "Healthy",
+      "zh_hant": "健康"
+    },
+    "VG": {
+      "en": "Vegan",
+      "zh_hant": "純素"
+    },
+    "GF": {
+      "en": "Gluten Free",
+      "zh_hant": "無麩質"
+    },
+    "LC": {
+      "en": "Lactose Free",
+      "zh_hant": "無乳糖"
+    },
+    "LS": {
+      "en": "Locally Sourced",
+      "zh_hant": "本地食材"
+    },
+    "P": {
+      "en": "Pork",
+      "zh_hant": "豬肉"
+    },
+    "N": {
+      "en": "Nuts",
+      "zh_hant": "含堅果"
+    }
+  },
+  "intro": {
+    "en": "Inspired by the Balinese wisdom “Nyegara Gunung” from the mountain to the ocean, Kayuputi showcases Pan-Asian haute cuisine featuring the finest ingredients from the land and the ocean. The culinary creations are complemented by the 16th consecutive year award-winning wine list from prestigious Wine Spectator Award. In a sublime setting of white wood, the restaurant reflects an all white wood décor accented by exemplary Indonesian artifacts while the open kitchen welcomes you to witness our talented chef brigade crafting the gastronomic indulgence against the backdrop of the majestic Indian Ocean. We invite you to embark on the culinary journey from the land to the ocean with us.",
+    "zh_hant": "靈感源自峇里智慧「Nyegara Gunung」（由山至海），Kayuputi 以陸地與海洋的上乘食材呈現泛亞洲高級料理。餐廳配備連續第 16 年獲 Wine Spectator Award 肯定的酒單；白木空間、印尼工藝擺設與開放式廚房，配合印度洋景致，邀請你踏上一段由山至海的味覺旅程。"
+  },
+  "sections": [
+    {
+      "id": "section-01",
+      "name": {
+        "en": "Caviar",
+        "zh_hant": "魚子醬"
+      },
+      "page": 2,
+      "items": [
+        {
+          "id": "s01-i01-kristal-caviar",
+          "name": {
+            "en": "Kristal Caviar",
+            "zh_hant": "Kristal 魚子醬"
+          },
+          "description": {
+            "en": "House made buckwheat blinis, boiled free-range eggs, 20gr sour cream and scallion",
+            "zh_hant": "自家製蕎麥薄餅、烚走地蛋、20 克酸忌廉及青蔥"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 2800000,
+            "display": "IDR 2,800,000",
+            "pre_service_tax_estimate": 2314049.59,
+            "included_service_tax_estimate": 485950.41
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-02",
+      "name": {
+        "en": "Appetizer",
+        "zh_hant": "前菜"
+      },
+      "page": 2,
+      "items": [
+        {
+          "id": "s02-i01-ahi-tuna",
+          "name": {
+            "en": "Ahi Tuna",
+            "zh_hant": "阿希吞拿魚"
+          },
+          "description": {
+            "en": "Lightly smoked, Sawangan seaweed, coconut, jalapeño, cucumber sorbet",
+            "zh_hant": "輕煙燻吞拿魚、Sawangan 海藻、椰子、墨西哥辣椒、青瓜雪葩"
+          },
+          "dietary_tags": [
+            "H",
+            "GF",
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 340000,
+            "display": "IDR 340,000",
+            "pre_service_tax_estimate": 280991.74,
+            "included_service_tax_estimate": 59008.26
+          }
+        },
+        {
+          "id": "s02-i02-sweet-prawn",
+          "name": {
+            "en": "Sweet Prawn",
+            "zh_hant": "甜蝦"
+          },
+          "description": {
+            "en": "Prawn tartare, sweet corn and yuzu kosho, Avruga caviar, shiro dashi vinaigrette",
+            "zh_hant": "甜蝦他他、甜粟米與柚子胡椒、Avruga 魚子醬、白出汁油醋汁"
+          },
+          "dietary_tags": [
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 360000,
+            "display": "IDR 360,000",
+            "pre_service_tax_estimate": 297520.66,
+            "included_service_tax_estimate": 62479.34
+          }
+        },
+        {
+          "id": "s02-i03-ruby-snapper",
+          "name": {
+            "en": "Ruby Snapper",
+            "zh_hant": "紅鯛魚"
+          },
+          "description": {
+            "en": "Ruby snapper carpaccio, pickled shallot, avocado, ponzu emulsion",
+            "zh_hant": "紅鯛魚薄片、醃乾蔥、牛油果、柚子醋乳化醬"
+          },
+          "dietary_tags": [
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 350000,
+            "display": "IDR 350,000",
+            "pre_service_tax_estimate": 289256.2,
+            "included_service_tax_estimate": 60743.8
+          }
+        },
+        {
+          "id": "s02-i04-char-grilled-octopus-tentacle",
+          "name": {
+            "en": "Char-Grilled Octopus Tentacle",
+            "zh_hant": "炭烤八爪魚觸鬚"
+          },
+          "description": {
+            "en": "Smoked eggplant, tomato relish, garlic crumbles, herb-spiced virgin coconut oil",
+            "zh_hant": "煙燻茄子、番茄 relish、蒜香脆粒、香草香料初榨椰子油"
+          },
+          "dietary_tags": [
+            "LC",
+            "LS",
+            "GF"
+          ],
+          "price": {
+            "amount": 320000,
+            "display": "IDR 320,000",
+            "pre_service_tax_estimate": 264462.81,
+            "included_service_tax_estimate": 55537.19
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-03",
+      "name": {
+        "en": "Soup",
+        "zh_hant": "湯品"
+      },
+      "page": 2,
+      "items": [
+        {
+          "id": "s03-i01-lobster",
+          "name": {
+            "en": "Lobster",
+            "zh_hant": "龍蝦湯"
+          },
+          "description": {
+            "en": "Asian flavored lobster consommé, half lobster tail, lobster dumplings, shallot oil",
+            "zh_hant": "亞洲風味龍蝦清湯、半隻龍蝦尾、龍蝦餃、乾蔥油"
+          },
+          "dietary_tags": [
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 490000,
+            "display": "IDR 490,000",
+            "pre_service_tax_estimate": 404958.68,
+            "included_service_tax_estimate": 85041.32
+          }
+        },
+        {
+          "id": "s03-i02-oxtail",
+          "name": {
+            "en": "Oxtail",
+            "zh_hant": "牛尾湯"
+          },
+          "description": {
+            "en": "Oxtail ragout, celery, carrot, kemangi oil, Archipelago-spiced oxtail broth",
+            "zh_hant": "牛尾燉肉、芹菜、甘筍、kemangi 羅勒油、群島香料牛尾湯"
+          },
+          "dietary_tags": [
+            "LC"
+          ],
+          "price": {
+            "amount": 400000,
+            "display": "IDR 400,000",
+            "pre_service_tax_estimate": 330578.51,
+            "included_service_tax_estimate": 69421.49
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-04",
+      "name": {
+        "en": "Main Course — From the Ocean",
+        "zh_hant": "主菜 — 海洋"
+      },
+      "page": 3,
+      "items": [
+        {
+          "id": "s04-i01-sari-segara",
+          "name": {
+            "en": "Sari Segara",
+            "zh_hant": "Sari Segara 海鮮拼盤"
+          },
+          "description": {
+            "en": "Char-grilled Jimbaran bay seafood, banana blossom, spiced crustacean emulsion, laksa leaf oil",
+            "zh_hant": "炭烤金巴蘭灣海鮮、香蕉花、香料甲殼類乳化醬、叻沙葉油"
+          },
+          "dietary_tags": [
+            "LC",
+            "GF"
+          ],
+          "price": {
+            "amount": 640000,
+            "display": "IDR 640,000",
+            "pre_service_tax_estimate": 528925.62,
+            "included_service_tax_estimate": 111074.38
+          }
+        },
+        {
+          "id": "s04-i02-locally-caught-fish",
+          "name": {
+            "en": "Locally Caught Fish",
+            "zh_hant": "本地捕獲鮮魚"
+          },
+          "description": {
+            "en": "Sautéed vegetables, Asian cress salad, soy and ginger broth",
+            "zh_hant": "炒雜菜、亞洲水芹沙律、豉油薑湯"
+          },
+          "dietary_tags": [
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 390000,
+            "display": "IDR 390,000",
+            "pre_service_tax_estimate": 322314.05,
+            "included_service_tax_estimate": 67685.95
+          }
+        },
+        {
+          "id": "s04-i03-tasmanian-salmon",
+          "name": {
+            "en": "Tasmanian Salmon",
+            "zh_hant": "塔斯曼尼亞三文魚"
+          },
+          "description": {
+            "en": "Miso cured salmon, zucchini, kemangi oil, bonito-reduction",
+            "zh_hant": "味噌醃三文魚、意大利青瓜、kemangi 羅勒油、鰹魚濃縮汁"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 460000,
+            "display": "IDR 460,000",
+            "pre_service_tax_estimate": 380165.29,
+            "included_service_tax_estimate": 79834.71
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-05",
+      "name": {
+        "en": "Main Course — From the Land",
+        "zh_hant": "主菜 — 陸地"
+      },
+      "page": 3,
+      "items": [
+        {
+          "id": "s05-i01-braised-veal-cheek",
+          "name": {
+            "en": "Braised Veal Cheek",
+            "zh_hant": "燉小牛面頰肉"
+          },
+          "description": {
+            "en": "Slow-braised veal, chestnut, cauliflower couscous, vegetable crumbles, truffle sauce",
+            "zh_hant": "慢燉小牛肉、栗子、椰菜花 couscous、蔬菜脆粒、松露醬"
+          },
+          "dietary_tags": [
+            "GF",
+            "N"
+          ],
+          "price": {
+            "amount": 470000,
+            "display": "IDR 470,000",
+            "pre_service_tax_estimate": 388429.75,
+            "included_service_tax_estimate": 81570.25
+          }
+        },
+        {
+          "id": "s05-i02-wagyu-sirloin-mb7",
+          "name": {
+            "en": "Wagyu Sirloin MB7",
+            "zh_hant": "MB7 和牛西冷"
+          },
+          "description": {
+            "en": "Truffle potato espuma, parmesan fondue, Plaga organic romaine, smoked bone marrow sauce",
+            "zh_hant": "松露薯仔 espuma、巴馬臣芝士 fondue、Plaga 有機羅馬生菜、煙燻骨髓醬"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 650000,
+            "display": "IDR 650,000",
+            "pre_service_tax_estimate": 537190.08,
+            "included_service_tax_estimate": 112809.92
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-06",
+      "name": {
+        "en": "Pasta",
+        "zh_hant": "意粉"
+      },
+      "page": 3,
+      "items": [
+        {
+          "id": "s06-i01-freshly-made-strozzapreti",
+          "name": {
+            "en": "Freshly Made Strozzapreti",
+            "zh_hant": "新鮮手工 Strozzapreti 意粉"
+          },
+          "description": {
+            "en": "Braised beef and mushroom ragout, truffle oil",
+            "zh_hant": "燉牛肉與蘑菇 ragout、松露油"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 540000,
+            "display": "IDR 540,000",
+            "pre_service_tax_estimate": 446280.99,
+            "included_service_tax_estimate": 93719.01
+          }
+        },
+        {
+          "id": "s06-i02-short-rib-rigatoni",
+          "name": {
+            "en": "Short-Rib Rigatoni",
+            "zh_hant": "牛小排 Rigatoni"
+          },
+          "description": {
+            "en": "Tomato ragout, garlic, shallots, young basil leaf extract",
+            "zh_hant": "番茄 ragout、蒜、乾蔥、幼羅勒葉萃取"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 520000,
+            "display": "IDR 520,000",
+            "pre_service_tax_estimate": 429752.07,
+            "included_service_tax_estimate": 90247.93
+          }
+        },
+        {
+          "id": "s06-i03-seafood-linguine",
+          "name": {
+            "en": "Seafood Linguine",
+            "zh_hant": "海鮮 Linguine"
+          },
+          "description": {
+            "en": "Prawns, scallops, white wine butter sauce",
+            "zh_hant": "蝦、帶子、白酒牛油汁"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 540000,
+            "display": "IDR 540,000",
+            "pre_service_tax_estimate": 446280.99,
+            "included_service_tax_estimate": 93719.01
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-07",
+      "name": {
+        "en": "Grilled Live Jimbaran Lobster",
+        "zh_hant": "炭烤金巴蘭活龍蝦"
+      },
+      "page": 3,
+      "items": [
+        {
+          "id": "s07-i01-whole-live-lobster",
+          "name": {
+            "en": "Whole Live Lobster",
+            "zh_hant": "原隻活龍蝦"
+          },
+          "description": {
+            "en": "Roasted organic vegetables with kemangi-lemongrass béarnaise sauce; price per 100gr",
+            "zh_hant": "烤有機蔬菜，配 kemangi 香茅 béarnaise 醬；每 100 克計價"
+          },
+          "dietary_tags": [
+            "LS"
+          ],
+          "price": {
+            "amount": 350000,
+            "display": "IDR 350,000 / 100gr",
+            "pre_service_tax_estimate": 289256.2,
+            "included_service_tax_estimate": 60743.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-08",
+      "name": {
+        "en": "From the Garden — Appetizer",
+        "zh_hant": "花園素食 — 前菜"
+      },
+      "page": 4,
+      "items": [
+        {
+          "id": "s08-i01-organic-garden",
+          "name": {
+            "en": "Organic Garden",
+            "zh_hant": "有機花園沙律"
+          },
+          "description": {
+            "en": "Onion, heirloom carrot, Plaga farm lettuce, herb balsamic dressing",
+            "zh_hant": "洋蔥、傳統品種甘筍、Plaga 農場生菜、香草黑醋汁"
+          },
+          "dietary_tags": [
+            "V",
+            "H",
+            "LS"
+          ],
+          "price": {
+            "amount": 260000,
+            "display": "IDR 260,000",
+            "pre_service_tax_estimate": 214876.03,
+            "included_service_tax_estimate": 45123.97
+          }
+        },
+        {
+          "id": "s08-i02-bedugul-beetroot",
+          "name": {
+            "en": "Bedugul Beetroot",
+            "zh_hant": "Bedugul 紅菜頭"
+          },
+          "description": {
+            "en": "Textures of beetroot, vanilla-coconut coulis, Trigona honey and citrus vinaigrette, seasonal cress",
+            "zh_hant": "多重口感紅菜頭、雲呢拿椰子 coulis、Trigona 蜂蜜與柑橘油醋汁、時令水芹"
+          },
+          "dietary_tags": [
+            "V",
+            "H",
+            "VG",
+            "GF",
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 260000,
+            "display": "IDR 260,000",
+            "pre_service_tax_estimate": 214876.03,
+            "included_service_tax_estimate": 45123.97
+          }
+        },
+        {
+          "id": "s08-i03-kintamani-butternut-squash",
+          "name": {
+            "en": "Kintamani Butternut Squash",
+            "zh_hant": "Kintamani 牛油南瓜"
+          },
+          "description": {
+            "en": "Butternut, coconut pearls, aloe vera gel, green oil",
+            "zh_hant": "牛油南瓜、椰子珍珠、蘆薈啫喱、綠油"
+          },
+          "dietary_tags": [
+            "V",
+            "H",
+            "VG",
+            "GF",
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 260000,
+            "display": "IDR 260,000",
+            "pre_service_tax_estimate": 214876.03,
+            "included_service_tax_estimate": 45123.97
+          }
+        },
+        {
+          "id": "s08-i04-mushrooms",
+          "name": {
+            "en": "Mushrooms",
+            "zh_hant": "蘑菇"
+          },
+          "description": {
+            "en": "Mushroom raviolo, caramelized onion, soubise, vanilla milk foam, burnt onion dust",
+            "zh_hant": "蘑菇 raviolo、焦糖洋蔥、soubise 洋蔥醬、雲呢拿奶泡、焦洋蔥粉"
+          },
+          "dietary_tags": [
+            "V",
+            "LS"
+          ],
+          "price": {
+            "amount": 290000,
+            "display": "IDR 290,000",
+            "pre_service_tax_estimate": 239669.42,
+            "included_service_tax_estimate": 50330.58
+          }
+        },
+        {
+          "id": "s08-i05-jerusalem-artichoke-soup",
+          "name": {
+            "en": "Jerusalem Artichoke Soup",
+            "zh_hant": "耶路撒冷雅枝竹湯"
+          },
+          "description": {
+            "en": "Creamy artichoke soup, caramelized apple, shallot confit",
+            "zh_hant": "忌廉雅枝竹湯、焦糖蘋果、油封乾蔥"
+          },
+          "dietary_tags": [
+            "V",
+            "LS"
+          ],
+          "price": {
+            "amount": 290000,
+            "display": "IDR 290,000",
+            "pre_service_tax_estimate": 239669.42,
+            "included_service_tax_estimate": 50330.58
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-09",
+      "name": {
+        "en": "From the Garden — Main Courses",
+        "zh_hant": "花園素食 — 主菜"
+      },
+      "page": 4,
+      "items": [
+        {
+          "id": "s09-i01-buduk-tofu",
+          "name": {
+            "en": "Buduk Tofu",
+            "zh_hant": "Buduk 豆腐"
+          },
+          "description": {
+            "en": "Kayuputi-style tofu curry, coconut textures, Kalasan espuma, organic Chef’s Garden vegetables",
+            "zh_hant": "Kayuputi 風格豆腐咖喱、多重椰子口感、Kalasan espuma、有機主廚花園蔬菜"
+          },
+          "dietary_tags": [
+            "V",
+            "VG",
+            "GF",
+            "LC",
+            "LS"
+          ],
+          "price": {
+            "amount": 350000,
+            "display": "IDR 350,000",
+            "pre_service_tax_estimate": 289256.2,
+            "included_service_tax_estimate": 60743.8
+          }
+        },
+        {
+          "id": "s09-i02-eggplant-ricotta-tortellini",
+          "name": {
+            "en": "Eggplant Ricotta Tortellini",
+            "zh_hant": "茄子 Ricotta Tortellini"
+          },
+          "description": {
+            "en": "Dried cherry tomato, onion variation, Parmigiano Reggiano, basil oil",
+            "zh_hant": "風乾車厘茄、多重洋蔥、Parmigiano Reggiano、羅勒油"
+          },
+          "dietary_tags": [
+            "V"
+          ],
+          "price": {
+            "amount": 360000,
+            "display": "IDR 360,000",
+            "pre_service_tax_estimate": 297520.66,
+            "included_service_tax_estimate": 62479.34
+          }
+        },
+        {
+          "id": "s09-i03-fava-bean",
+          "name": {
+            "en": "Fava Bean",
+            "zh_hant": "蠶豆"
+          },
+          "description": {
+            "en": "Balinese-style braised fava beans, quinoa, and sweet potato purée",
+            "zh_hant": "峇里風味燉蠶豆、藜麥及番薯蓉"
+          },
+          "dietary_tags": [
+            "V",
+            "LS"
+          ],
+          "price": {
+            "amount": 330000,
+            "display": "IDR 330,000",
+            "pre_service_tax_estimate": 272727.27,
+            "included_service_tax_estimate": 57272.73
+          }
+        },
+        {
+          "id": "s09-i04-truffle-risotto",
+          "name": {
+            "en": "Truffle Risotto",
+            "zh_hant": "松露意大利飯"
+          },
+          "description": {
+            "en": "Wild mushroom ragout, Parmigiano Reggiano, truffle essence",
+            "zh_hant": "野菌 ragout、Parmigiano Reggiano、松露精華"
+          },
+          "dietary_tags": [
+            "V"
+          ],
+          "price": {
+            "amount": 510000,
+            "display": "IDR 510,000",
+            "pre_service_tax_estimate": 421487.6,
+            "included_service_tax_estimate": 88512.4
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "name": {
+        "en": "Cheese",
+        "zh_hant": "芝士"
+      },
+      "page": 5,
+      "items": [
+        {
+          "id": "s10-i01-artisanal-selection-of-finest-french-cheese",
+          "name": {
+            "en": "Artisanal Selection of Finest French Cheese",
+            "zh_hant": "精選法國手工芝士"
+          },
+          "description": {
+            "en": "Served with fig chutney, Buleleng grapes, Trigona honey, nuts and house-made dried fruit bread",
+            "zh_hant": "配無花果 chutney、Buleleng 葡萄、Trigona 蜂蜜、堅果及自家製乾果麵包"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 450000,
+            "display": "IDR 450,000",
+            "pre_service_tax_estimate": 371900.83,
+            "included_service_tax_estimate": 78099.17
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-11",
+      "name": {
+        "en": "Desserts",
+        "zh_hant": "甜品"
+      },
+      "page": 5,
+      "items": [
+        {
+          "id": "s11-i01-swirl-chocolate",
+          "name": {
+            "en": "Swirl Chocolate",
+            "zh_hant": "朱古力旋渦"
+          },
+          "description": {
+            "en": "Bitter chocolate mousse, Sumatra coffee cream, banana sherbet",
+            "zh_hant": "苦朱古力慕絲、蘇門答臘咖啡忌廉、香蕉雪葩"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 250000,
+            "display": "IDR 250,000",
+            "pre_service_tax_estimate": 206611.57,
+            "included_service_tax_estimate": 43388.43
+          }
+        },
+        {
+          "id": "s11-i02-coconut-light",
+          "name": {
+            "en": "Coconut Light",
+            "zh_hant": "輕盈椰子甜品"
+          },
+          "description": {
+            "en": "Banana biscuit, mango, coconut sherbet",
+            "zh_hant": "香蕉餅乾、芒果、椰子雪葩"
+          },
+          "dietary_tags": [
+            "VG",
+            "GF",
+            "LC",
+            "N"
+          ],
+          "price": {
+            "amount": 250000,
+            "display": "IDR 250,000",
+            "pre_service_tax_estimate": 206611.57,
+            "included_service_tax_estimate": 43388.43
+          }
+        },
+        {
+          "id": "s11-i03-fresh-fruit-bowl",
+          "name": {
+            "en": "Fresh Fruit Bowl",
+            "zh_hant": "鮮果碗"
+          },
+          "description": {
+            "en": "Fresh lime and coconut milk sherbet selection",
+            "zh_hant": "鮮青檸與椰奶雪葩精選"
+          },
+          "dietary_tags": [
+            "GF",
+            "VG"
+          ],
+          "price": {
+            "amount": 250000,
+            "display": "IDR 250,000",
+            "pre_service_tax_estimate": 206611.57,
+            "included_service_tax_estimate": 43388.43
+          }
+        }
+      ]
+    },
+    {
+      "id": "section-12",
+      "name": {
+        "en": "Homemade Ice Cream and Sherbet",
+        "zh_hant": "自家製雪糕與雪葩"
+      },
+      "page": 5,
+      "items": [
+        {
+          "id": "s12-i01-ice-cream",
+          "name": {
+            "en": "Ice Cream",
+            "zh_hant": "雪糕"
+          },
+          "description": {
+            "en": "Vanilla, chocolate, yoghurt, coffee; per scoop",
+            "zh_hant": "雲呢拿、朱古力、乳酪、咖啡；每球計價"
+          },
+          "dietary_tags": [],
+          "price": {
+            "amount": 85000,
+            "display": "IDR 85,000 / scoop",
+            "pre_service_tax_estimate": 70247.93,
+            "included_service_tax_estimate": 14752.07
+          }
+        },
+        {
+          "id": "s12-i02-sorbet",
+          "name": {
+            "en": "Sorbet",
+            "zh_hant": "雪葩"
+          },
+          "description": {
+            "en": "Strawberry, coconut, mango, orange; per scoop",
+            "zh_hant": "士多啤梨、椰子、芒果、橙；每球計價"
+          },
+          "dietary_tags": [
+            "VG"
+          ],
+          "price": {
+            "amount": 85000,
+            "display": "IDR 85,000 / scoop",
+            "pre_service_tax_estimate": 70247.93,
+            "included_service_tax_estimate": 14752.07
+          }
+        }
+      ]
+    }
+  ],
+  "footer_note": {
+    "en": "In our effort to fulfill your expectation, please inform our staff should you have special dietary requirements, food allergies or food intolerances.",
+    "zh_hant": "如有任何特殊飲食要求、食物敏感或不耐受，請告知餐廳職員。"
+  },
+  "counts": {
+    "sections": 12,
+    "items": 31
+  }
+}

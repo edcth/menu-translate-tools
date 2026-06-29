@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayuputi Bilingual Menu Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Bilingual menu renderer · JSON-driven</p>
+        <h1 id="title">Kayuputi</h1>
+        <p id="subtitle" class="subtitle">Loading menu…</p>
+      </div>
+      <div class="toolbar">
+        <label class="select-label">資料源
+          <input id="jsonUrl" value="menu.bilingual.json" />
+        </label>
+        <button id="reloadBtn" class="ghost">Reload JSON</button>
+        <button id="clearCartBtn" class="danger">清空 Cart</button>
+      </div>
+    </header>
+
+    <section class="notice" id="notice"></section>
+
+    <main class="layout">
+      <aside class="filters">
+        <div class="panel">
+          <h2>Sections</h2>
+          <nav id="sectionNav" class="section-nav"></nav>
+        </div>
+        <div class="panel legend-panel">
+          <h2>Dietary</h2>
+          <div id="legend"></div>
+        </div>
+      </aside>
+
+      <section id="menu" class="menu-list" aria-live="polite"></section>
+
+      <aside class="cart panel" aria-live="polite">
+        <div class="cart-head">
+          <div>
+            <h2>Cart</h2>
+            <p id="cartMeta">0 items</p>
+          </div>
+        </div>
+        <div id="cartItems" class="cart-items empty">未加入任何項目</div>
+        <div class="totals">
+          <div><span>小計 / Subtotal</span><strong id="subtotal">IDR 0</strong></div>
+          <div><span>已包含 21% 稅及服務費</span><strong id="includedTax">IDR 0</strong></div>
+          <div><span>稅前估算 / Before 21%</span><strong id="preTax">IDR 0</strong></div>
+          <div class="grand"><span>目前總價 / Total</span><strong id="grandTotal">IDR 0</strong></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
