@@ -1,7 +1,37 @@
+const CART_STORAGE_KEY = 'kayuputi-menu-cart:v1';
 const state = { menu: null, cart: new Map(), customItems: new Map() };
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => `IDR ${Math.round(n).toLocaleString('en-US')}`;
 const esc = (s = '') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+function persistCart() {
+  try {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify({
+      cart: [...state.cart.entries()],
+      customItems: [...state.customItems.entries()]
+    }));
+  } catch (err) {
+    console.warn('Cart persistence failed:', err);
+  }
+}
+function restoreCart() {
+  try {
+    const raw = localStorage.getItem(CART_STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    state.cart = new Map(Array.isArray(saved.cart) ? saved.cart : []);
+    state.customItems = new Map(Array.isArray(saved.customItems) ? saved.customItems : []);
+  } catch (err) {
+    console.warn('Cart restore failed:', err);
+    localStorage.removeItem(CART_STORAGE_KEY);
+  }
+}
+function clearStoredCart() {
+  state.cart.clear();
+  state.customItems.clear();
+  localStorage.removeItem(CART_STORAGE_KEY);
+  renderCart(false);
+}
 
 async function loadMenu() {
   const url = $('jsonUrl').value.trim() || 'menu.bilingual.json';
@@ -9,6 +39,7 @@ async function loadMenu() {
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     state.menu = await res.json();
+    restoreCart();
     $('notice').innerHTML = `資料源：<code>${esc(url)}</code> · ${state.menu.counts.items} items · 價格已包含 ${state.menu.tax_and_service.rate_percent}% service charge and government tax`;
     renderAll();
   } catch (err) {
@@ -130,7 +161,7 @@ function closeCartDrawer() {
   $('cartDrawer').setAttribute('aria-hidden', 'true');
   $('bottomCartBar').setAttribute('aria-expanded', 'false');
 }
-function renderCart() {
+function renderCart(persist = true) {
   const entries = [...state.cart.entries()].map(([id, qty]) => ({ item: findItem(id), qty })).filter(x => x.item);
   const totalQty = entries.reduce((s, x) => s + x.qty, 0);
   const subtotal = entries.reduce((s, x) => s + x.item.price.amount * x.qty, 0);
@@ -150,6 +181,7 @@ function renderCart() {
   setText('drawerPreTax', fmt(preTax));
   setText('drawerIncludedTax', fmt(included));
   setText('drawerGrandTotal', fmt(subtotal));
+  if (persist) persistCart();
 }
 
 document.addEventListener('click', (ev) => {
@@ -173,5 +205,5 @@ $('drawerCustomAddonForm').addEventListener('submit', (ev) => {
   ev.preventDefault();
   addCustomAddon('drawerCustomAddonName', 'drawerCustomAddonAmount');
 });
-$('clearCartBtn').addEventListener('click', () => { state.cart.clear(); state.customItems.clear(); renderCart(); });
+$('clearCartBtn').addEventListener('click', clearStoredCart);
 loadMenu();
