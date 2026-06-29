@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edcth.github.io/menu-translate-tools/schemas/menu.bilingual.schema.json",
+  "title": "Bilingual Restaurant Menu",
+  "type": "object",
+  "required": ["schema_version", "restaurant", "menu_name", "currency", "tax_and_service", "dietary_legend", "sections", "counts"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "source": { "type": "object" },
+    "restaurant": { "$ref": "#/$defs/i18nString" },
+    "menu_name": { "$ref": "#/$defs/i18nString" },
+    "service_time": { "type": "string" },
+    "currency": { "type": "string" },
+    "tax_and_service": {
+      "type": "object",
+      "required": ["included_in_listed_prices", "rate_percent", "label_en", "label_zh_hant"],
+      "properties": {
+        "included_in_listed_prices": { "type": "boolean" },
+        "rate_percent": { "type": "number" },
+        "label": { "type": "string" },
+        "label_en": { "type": "string" },
+        "label_zh_hant": { "type": "string" },
+        "calculation_note": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "dietary_legend": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/i18nString" }
+    },
+    "intro": { "$ref": "#/$defs/i18nString" },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "items"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "$ref": "#/$defs/i18nString" },
+          "page": { "type": ["integer", "string", "null"] },
+          "items": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/menuItem" }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "footer_note": { "$ref": "#/$defs/i18nString" },
+    "counts": {
+      "type": "object",
+      "required": ["sections", "items"],
+      "properties": {
+        "sections": { "type": "integer" },
+        "items": { "type": "integer" }
+      }
+    }
+  },
+  "$defs": {
+    "i18nString": {
+      "type": "object",
+      "required": ["en", "zh_hant"],
+      "properties": {
+        "en": { "type": "string" },
+        "zh_hant": { "type": "string" }
+      }
+    },
+    "menuItem": {
+      "type": "object",
+      "required": ["id", "name", "description", "dietary_tags", "price"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "$ref": "#/$defs/i18nString" },
+        "description": { "$ref": "#/$defs/i18nString" },
+        "dietary_tags": { "type": "array", "items": { "type": "string" } },
+        "price": {
+          "type": "object",
+          "required": ["amount", "display", "pre_service_tax_estimate", "included_service_tax_estimate"],
+          "properties": {
+            "amount": { "type": "number" },
+            "display": { "type": "string" },
+            "pre_service_tax_estimate": { "type": "number" },
+            "included_service_tax_estimate": { "type": "number" }
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

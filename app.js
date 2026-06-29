@@ -1,6 +1,7 @@
-const CART_STORAGE_KEY = 'kayuputi-menu-cart:v1';
+const CART_STORAGE_KEY = 'menu-translate-tools:cart:v1';
 const state = { menu: null, cart: new Map(), customItems: new Map() };
 const $ = (id) => document.getElementById(id);
+const initialDataUrl = new URLSearchParams(location.search).get('data');
 const fmt = (n) => `IDR ${Math.round(n).toLocaleString('en-US')}`;
 const esc = (s = '') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
@@ -206,4 +207,5 @@ $('drawerCustomAddonForm').addEventListener('submit', (ev) => {
   addCustomAddon('drawerCustomAddonName', 'drawerCustomAddonAmount');
 });
 $('clearCartBtn').addEventListener('click', clearStoredCart);
+if (initialDataUrl) $('jsonUrl').value = initialDataUrl;
 loadMenu();
