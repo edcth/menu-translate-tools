@@ -68,32 +68,67 @@ function changeQty(id, delta) {
   if (next <= 0) state.cart.delete(id); else state.cart.set(id, next);
   renderCart();
 }
+function cartRowHtml(item, qty) {
+  return `<div class="cart-row">
+    <div><div class="cart-row-name">${esc(item.name.zh_hant)}</div><div class="cart-row-price">${esc(item.price.display)} × ${qty}</div></div>
+    <div class="qty"><button data-dec="${esc(item.id)}" aria-label="減少 ${esc(item.name.zh_hant)}">−</button><strong>${qty}</strong><button data-inc="${esc(item.id)}" aria-label="增加 ${esc(item.name.zh_hant)}">+</button></div>
+  </div>`;
+}
+
+function setText(id, value) {
+  const el = $(id);
+  if (el) el.textContent = value;
+}
+function setCartList(id, entries) {
+  const el = $(id);
+  if (!el) return;
+  el.classList.toggle('empty', entries.length === 0);
+  el.innerHTML = entries.length ? entries.map(({item, qty}) => cartRowHtml(item, qty)).join('') : '未加入任何項目';
+}
+function openCartDrawer() {
+  $('cartDrawer').classList.add('open');
+  $('cartDrawer').setAttribute('aria-hidden', 'false');
+  $('bottomCartBar').setAttribute('aria-expanded', 'true');
+}
+function closeCartDrawer() {
+  $('cartDrawer').classList.remove('open');
+  $('cartDrawer').setAttribute('aria-hidden', 'true');
+  $('bottomCartBar').setAttribute('aria-expanded', 'false');
+}
 function renderCart() {
   const entries = [...state.cart.entries()].map(([id, qty]) => ({ item: findItem(id), qty })).filter(x => x.item);
   const totalQty = entries.reduce((s, x) => s + x.qty, 0);
   const subtotal = entries.reduce((s, x) => s + x.item.price.amount * x.qty, 0);
   const preTax = subtotal / 1.21;
   const included = subtotal - preTax;
-  $('cartMeta').textContent = `${totalQty} item${totalQty === 1 ? '' : 's'}`;
-  $('cartItems').classList.toggle('empty', entries.length === 0);
-  $('cartItems').innerHTML = entries.length ? entries.map(({item, qty}) => `<div class="cart-row">
-    <div><div class="cart-row-name">${esc(item.name.zh_hant)}</div><div class="cart-row-price">${esc(item.price.display)} × ${qty}</div></div>
-    <div class="qty"><button data-dec="${esc(item.id)}">−</button><strong>${qty}</strong><button data-inc="${esc(item.id)}">+</button></div>
-  </div>`).join('') : '未加入任何項目';
-  $('subtotal').textContent = fmt(subtotal);
-  $('preTax').textContent = fmt(preTax);
-  $('includedTax').textContent = fmt(included);
-  $('grandTotal').textContent = fmt(subtotal);
+  const qtyLabel = `${totalQty} item${totalQty === 1 ? '' : 's'}`;
+  setText('cartMeta', qtyLabel);
+  setText('bottomCartCount', qtyLabel);
+  setText('bottomCartTotal', fmt(subtotal));
+  setCartList('cartItems', entries);
+  setCartList('drawerCartItems', entries);
+  setText('subtotal', fmt(subtotal));
+  setText('preTax', fmt(preTax));
+  setText('includedTax', fmt(included));
+  setText('grandTotal', fmt(subtotal));
+  setText('drawerSubtotal', fmt(subtotal));
+  setText('drawerPreTax', fmt(preTax));
+  setText('drawerIncludedTax', fmt(included));
+  setText('drawerGrandTotal', fmt(subtotal));
 }
 
 document.addEventListener('click', (ev) => {
   const add = ev.target.closest('[data-add]');
   const inc = ev.target.closest('[data-inc]');
   const dec = ev.target.closest('[data-dec]');
+  const close = ev.target.closest('[data-close-cart]');
   if (add) addItem(add.dataset.add);
   if (inc) changeQty(inc.dataset.inc, 1);
   if (dec) changeQty(dec.dataset.dec, -1);
+  if (close) closeCartDrawer();
 });
+document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') closeCartDrawer(); });
+$('bottomCartBar').addEventListener('click', openCartDrawer);
 $('reloadBtn').addEventListener('click', loadMenu);
 $('clearCartBtn').addEventListener('click', () => { state.cart.clear(); renderCart(); });
 loadMenu();

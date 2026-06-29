@@ -56,6 +56,33 @@
       </aside>
     </main>
   </div>
+
+  <button id="bottomCartBar" class="bottom-cart-bar" type="button" aria-controls="cartDrawer" aria-expanded="false">
+    <span class="bottom-cart-pill" id="bottomCartCount">0 items</span>
+    <span class="bottom-cart-label">查看 Cart 明細</span>
+    <strong id="bottomCartTotal">IDR 0</strong>
+  </button>
+
+  <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">Current order</p>
+          <h2 id="drawerTitle">Cart 明細</h2>
+        </div>
+        <button class="drawer-close" type="button" data-close-cart>關閉</button>
+      </div>
+      <div id="drawerCartItems" class="cart-items empty">未加入任何項目</div>
+      <div class="totals drawer-totals">
+        <div><span>小計 / Subtotal</span><strong id="drawerSubtotal">IDR 0</strong></div>
+        <div><span>已包含 21% 稅及服務費</span><strong id="drawerIncludedTax">IDR 0</strong></div>
+        <div><span>稅前估算 / Before 21%</span><strong id="drawerPreTax">IDR 0</strong></div>
+        <div class="grand"><span>目前總價 / Total</span><strong id="drawerGrandTotal">IDR 0</strong></div>
+      </div>
+    </section>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
